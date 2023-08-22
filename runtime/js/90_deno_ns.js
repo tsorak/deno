@@ -2,6 +2,7 @@
 
 const core = globalThis.Deno.core;
 const ops = core.ops;
+import * as doc from "ext:deno_doc_runtime/doc_runtime.js";
 import * as timers from "ext:deno_web/02_timers.js";
 import * as httpClient from "ext:deno_fetch/22_http_client.js";
 import * as console from "ext:deno_console/01_console.js";
@@ -25,6 +26,7 @@ import * as httpRuntime from "ext:runtime/40_http.js";
 import * as kv from "ext:deno_kv/01_db.ts";
 
 const denoNs = {
+  doc: doc.doc,
   metrics: core.metrics,
   Process: process.Process,
   run: process.run,

@@ -398,6 +398,7 @@ impl WebWorker {
     // `runtime/build.rs`, `runtime/worker.rs` and `cli/build.rs`!
 
     let mut extensions = vec![
+      deno_doc_runtime::deno_doc_runtime::init_ops_and_esm(),
       // Web APIs
       deno_webidl::deno_webidl::init_ops_and_esm(),
       deno_console::deno_console::init_ops_and_esm(),

@@ -320,6 +320,7 @@ fn create_cli_snapshot(snapshot_path: PathBuf) -> CreateSnapshotOutput {
   // `runtime/worker.rs`, `runtime/web_worker.rs` and `runtime/build.rs`!
   let fs = Arc::new(deno_fs::RealFs);
   let extensions: Vec<Extension> = vec![
+    deno_doc_runtime::deno_doc_runtime::init_ops(),
     deno_webidl::deno_webidl::init_ops(),
     deno_console::deno_console::init_ops(),
     deno_url::deno_url::init_ops(),

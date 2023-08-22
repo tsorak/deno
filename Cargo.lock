@@ -1084,6 +1084,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "deno_doc_runtime"
+version = "0.1.0"
+dependencies = [
+ "deno_core",
+ "deno_doc",
+ "tokio",
+]
+
+[[package]]
 name = "deno_emit"
 version = "0.26.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1417,6 +1426,7 @@ dependencies = [
  "deno_console",
  "deno_core",
  "deno_crypto",
+ "deno_doc_runtime",
  "deno_fetch",
  "deno_ffi",
  "deno_fs",

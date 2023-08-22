@@ -311,6 +311,7 @@ mod startup_snapshot {
     // `runtime/worker.rs`, `runtime/web_worker.rs` and `cli/build.rs`!
     let fs = std::sync::Arc::new(deno_fs::RealFs);
     let mut extensions: Vec<Extension> = vec![
+      deno_doc_runtime::deno_doc_runtime::init_ops_and_esm(),
       deno_webidl::deno_webidl::init_ops_and_esm(),
       deno_console::deno_console::init_ops_and_esm(),
       deno_url::deno_url::init_ops_and_esm(),

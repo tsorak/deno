@@ -28,6 +28,7 @@ members = [
   "ext/websocket",
   "ext/webstorage",
   "ext/napi",
+  "ext/doc_runtime",
 ]
 exclude = ["test_util/std/hash/_wasm"]
 
@@ -71,6 +72,7 @@ deno_webidl = { version = "0.115.0", path = "./ext/webidl" }
 deno_websocket = { version = "0.120.0", path = "./ext/websocket" }
 deno_webstorage = { version = "0.110.0", path = "./ext/webstorage" }
 deno_napi = { version = "0.45.0", path = "./ext/napi" }
+deno_doc_runtime = { version = "0.1.0", path = "./ext/doc_runtime" }
 
 aes = "=0.8.2"
 anyhow = "1.0.57"
@@ -325,4 +327,6 @@ opt-level = 3
 [profile.release.package.zstd-sys]
 opt-level = 3
 [profile.release.package.base64-simd]
+opt-level = 3
+[profile.release.package.deno_doc_runtime]
 opt-level = 3
